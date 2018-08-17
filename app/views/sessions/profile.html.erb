@@ -1,0 +1,26 @@
+
+<div>
+	<div>
+		<h1>YOUR PROFILE</h1>
+	</div>
+	
+		|<div class= "dp">
+			<%= gravatar_for @user %>
+		</div>
+		<div class="info">
+			<%= form_for(:session, url: login_path) do |f| %>
+				<%= f.label :name %>
+      			<%= f.text_field :name,:value => @user.name , class: 'ffield' %>
+      			<br>
+      			<%= f.label :email %>
+      			<%= f.email_field :email,:value => @user.email , class: 'ffield' %>
+      			<br>
+     			<%= f.label :password %>
+     			<%= f.password_field :password, :value => '********',class: 'ffield' %>
+      			<br>
+      			<%= f.submit "Log in", class: "btn btn-primary" %>
+    		<% end %>
+
+		</div>
+	
+</div>
