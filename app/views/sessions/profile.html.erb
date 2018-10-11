@@ -11,6 +11,7 @@
 			<%= form_for(:session, url: login_path) do |f| %>
 				<%= f.label :name %>
       			<%= f.text_field :name,:value => @user.name , class: 'ffield' %>
+      			
       			<br>
       			<%= f.label :email %>
       			<%= f.email_field :email,:value => @user.email , class: 'ffield' %>
